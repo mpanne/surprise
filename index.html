@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas surprise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      height: 100vh;
+      background: url("background.jpg") no-repeat center center;
+      background-size: cover;
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    form {
+      width: 500px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .wrapper {
+      display: flex;
+    }
+    .wrapper:first-child input:first-child {
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: #cc0000;
+      margin-top: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Your lovely Christmas surprise</h1>
+  <p>Please leave your data to sign up for the Christmas surprise.</p>
+
+  <form id="showcase-form">
+    <!-- Six text inputs with no labels -->
+    <div class="wrapper">
+      <input type="text" placeholder="">
+      <input type="text" placeholder="">
+    </div>
+    <div class="wrapper">
+      <input type="text" placeholder="">
+    </div>
+
+    <button type="submit">Submit</button>
+    <p class="error-message" id="error-message" style="visibility: hidden">Please provide valid data for all fields before submitting.</p>
+  </form>
+</div>
+
+<script>
+  document.getElementById('showcase-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.style.visibility = 'visible'; // Show the error message
+  });
+</script>
+</body>
+</html>
