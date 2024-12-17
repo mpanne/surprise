@@ -90,7 +90,15 @@
     }
 
     .sr-only {
-      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
   </style>
@@ -102,8 +110,8 @@
     <p>Please provide your information to sign up for the Christmas surprise</p>
 
     <form id="showcase-form">
-      <label for="first-input" class="sr-only">A first input field without label. This is an example of bad accessibility.</label>
       <div class="wrapper">
+        <label for="first-input" class="sr-only">A first input field without label. This is an example of bad accessibility.</label>
         <input id="first-input" type="text" placeholder="" class="input-left">
         <input type="text" placeholder="">
       </div>
